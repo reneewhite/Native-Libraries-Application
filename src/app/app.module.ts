@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+//import { NativeAudio } from '@ionic-native/native-audio';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions, CaptureAudioOptions, CaptureVideoOptions } from '@ionic-native/media-capture';
+//import { VideoCapturePlus, VideoCapturePlusOptions } from '@ionic-native/video-capture-plus';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MediaCapture
+
   ]
 })
 export class AppModule {}
